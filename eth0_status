@@ -1,8 +1,9 @@
 #!/bin/bash
-#name=$(/usr/bin/zenity --entry --title="Name your Video" \
-# --height=100 --width=300 --text="Please name your video ")
-#cp /tmp/Fla* ~/Videos/"$name"
-#
+
+# Check if eth0 is assigned any ip 
+# Display the notification in gnome using pynotify 
+# Kish 
+
 
 out=`/sbin/ifconfig eth0|grep "inet addr"`
 if [[ $? -eq 0 ]]; then 
@@ -15,7 +16,7 @@ python2 <<STUFF
 
 import pynotify
 
-pynotify.init("Save Flash ")
+pynotify.init("Eth0 status")
 msg = pynotify.Notification("ifconfig eth0", ${STAT}, "dialog-alert")
 msg.set_timeout(pynotify.EXPIRES_DEFAULT)
 msg.show()

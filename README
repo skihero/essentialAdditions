@@ -8,4 +8,4 @@ my Ubuntu installation.
 	This script checks to see if eth0 is connected by running 
 	ifconfig and checks the return value for assigned IP address. 
 	
-	
+2. 	
