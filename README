@@ -1,0 +1,11 @@
+I've written various command additions that makes my life easier while using 
+my Ubuntu installation. 
+
+
+1.  Check if eth0 is connected. 
+	I like gnome notify that pops up on your screen 
+	Wrote a small script and associated keyboard shortcut
+	This script checks to see if eth0 is connected by running 
+	ifconfig and checks the return value for assigned IP address. 
+	
+	
