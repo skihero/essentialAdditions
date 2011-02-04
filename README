@@ -8,4 +8,15 @@ my Ubuntu installation.
 	This script checks to see if eth0 is connected by running 
 	ifconfig and checks the return value for assigned IP address. 
 	
-2. 	
+2.  Save a Youtube stream 
+	Youtube places a buffered stream in /tmp with a filename 
+	matching the pattern Fla* 
+	This script save the file to ~/Videos by prompting for a name 
+	and displays a notification for the action. 
+	As usual I associate a keyboard shortcut in gnome 
+
+3.  Change the laptop screen brightness using the  	
+	Change my screen brightness using the virtual device file. 
+	Good for a lightweight desktops like blackbox where the controls 
+	for this, I'm ignorant of. 
+
