@@ -1,0 +1,23 @@
+#!/bin/bash
+#name=$(/usr/bin/zenity --entry --title="Name your Video" \
+# --height=100 --width=300 --text="Please name your video ")
+#cp /tmp/Fla* ~/Videos/"$name"
+#
+
+out=`/sbin/ifconfig eth0|grep "inet addr"`
+if [[ $? -eq 0 ]]; then 
+	STAT="\" connected \"" 
+    else
+        STAT="\"not connected\" "
+fi 
+
+python2 <<STUFF
+
+import pynotify
+
+pynotify.init("Save Flash ")
+msg = pynotify.Notification("ifconfig eth0", ${STAT}, "dialog-alert")
+msg.set_timeout(pynotify.EXPIRES_DEFAULT)
+msg.show()
+STUFF
+
