@@ -1,0 +1,34 @@
+#!/bin/bash
+# Save a single youtube stream to ~/Videos
+# Will not work if you have multiple streams open 
+#
+# Identifies a stream using the pattern Fla* in /tmp directory
+# where the streams are usually buffered. 
+#
+# This is handy for people who would occasionally like to 
+# save a stream. 
+# 
+# Kish 
+
+name=$(/usr/bin/zenity --entry --title="Name your Video" \
+ --height=100 --width=300 --text="Please name your video ")
+cp /tmp/Fla* ~/Videos/"$name"
+
+
+if [[ $? -eq 0 ]]; then 
+    STAT="\"File $name copied to ~/Videos/\"" 
+else
+    STAT="\"Couldn't copy $name \" "
+fi 
+
+python <<STUFF
+import pynotify
+
+pynotify.init("Save Flash ")
+
+msg = pynotify.Notification("SaveFlash", ${STAT}, "dialog-alert")
+msg.set_timeout(pynotify.EXPIRES_DEFAULT)
+msg.show()
+
+STUFF
+
