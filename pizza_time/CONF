@@ -1,0 +1,11 @@
+
+Cron configuration looks like this 
+
+
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/kishore/bin
+DISPLAY=:0.0
+
+0 14 * * * /usr/bin/lunch.sh
+
+
+Should write an install script one of these days
