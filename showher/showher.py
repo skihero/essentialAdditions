@@ -51,6 +51,7 @@ if (pb != None):
     c.setopt(c.COOKIEFILE, cookie_file_name)
     c.setopt(c.COOKIEJAR, cookie_file_name)
     c.setopt(c.WRITEFUNCTION, buf.write)
+    c.setopt(c.USERAGENT, 'Mozilla/4.0 (compatible; MSIE 8.0)')
     
     print "before perform" 
    
@@ -65,6 +66,7 @@ if (pb != None):
     result = buf.getvalue()
     c.close()
     
+    print result
     doc = xml.dom.minidom.parseString(result)
     
     url = doc.getElementsByTagName("original_image")[0].childNodes[0].nodeValue  

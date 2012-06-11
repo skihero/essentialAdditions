@@ -20,3 +20,11 @@ my Ubuntu installation.
 	Good for a lightweight desktops like blackbox where the controls 
 	for this, I'm ignorant of. 
 
+4.  Pizza timer that reminds you to eat at the right times 
+
+5.  Imgur image uploader. 
+	I bind a keyboard shortcut to this script. The script captures a 
+	screenshot of your screen and uploads to imgur, 
+	returns you the url for the image.
+	saves the url in the clipboard. 
+	TODO: write to a tmp file 
